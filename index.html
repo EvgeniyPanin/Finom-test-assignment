@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="./normalize.css" rel="stylesheet" />
+        <link href="./main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <aside class="banner paper">
+            <h1 class="banner__title f-w-600">Get the Business Funding You Need</h1>
+            <div class="columns">
+                <p class="text">
+                    Expand your business with a&nbsp;flexible loan tailored to&nbsp;your needs. 
+                    Whether you&rsquo;re investing in&nbsp;new equipment, increasing inventory, 
+                    or&nbsp;boosting cash flow, we&nbsp;offer quick approvals and competitive rates 
+                    to&nbsp;keep your business growing.
+                </p>
+                <ul class="list">
+                    <li class="list__item text f-w-500">Fast approval process</li>
+                    <li class="list__item text f-w-500">Flexible repayment terms</li>
+                    <li class="list__item text f-w-500">Competitive interest rates</li>
+                </ul>
+            </div>
+            <div class="banner__actions">
+                <button class="button t-a-center f-w-500">Apply Now</button>
+                <a class="link uppercase f-w-600 t-a-center" target="_blank" rel="noopener noreferrer" href="https://finom.co">More information</a>
+            </div>
+            <img class="illustration" alt="the shiny different-colored coins" src="./public/coins-currency.png" />
+            <button class="close-button banner__close-button" aria-label="Close banner"></button>
+        </aside>
+        <script>
+            const banner = document.querySelector('.banner');
+            const closeButton = document.querySelector('.banner__close-button');
+            closeButton.addEventListener('click', () => {
+                banner.classList.add('deleting');
+                banner.addEventListener('animationend', () => banner.remove());
+            })
+        </script>
+    </body>
+</html>
